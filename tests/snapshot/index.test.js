@@ -2,12 +2,7 @@
  * @jest-environment jsdom
  */
 
-const {
-  renderCoffee,
-  renderCoffees,
-  updateCoffees,
-  createCoffee,
-} = require("../../main");
+const { renderCoffee, renderCoffees } = require("../../main");
 
 const mockDocument = {
   querySelector: jest.fn(),

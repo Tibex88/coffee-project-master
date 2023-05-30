@@ -4,7 +4,7 @@
 
 const { coffees } = require("../data");
 const { renderCoffee, renderCoffees, init } = require("../../main");
-const { templateToHtml } = require("./../util");
+const { templateToHtml } = require("../util");
 
 describe("Component Rendering Test", () => {
   test("Render Coffee Card", () => {
