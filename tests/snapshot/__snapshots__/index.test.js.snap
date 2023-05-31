@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renderCoffee renders correctly 1`] = `"<div class="coffee"><div class=flex><div class="d-none">1</div><div class="name"><p>Light City</p></div><p class="roast">light</p></div><div class="del">X</div></div>"`;
+exports[`renderCoffee renders correctly 1`] = `"<div class="coffee"><div class=flex><div class="d-none">2</div><div class="name"><p>Light City</p></div><p class="roast">light</p></div><div class="del">X</div></div>"`;
 
 exports[`renderCoffees renders correctly 1`] = `"<div class="coffee"><div class=flex><div class="d-none">1</div><div class="name"><p>Light City</p></div><p class="roast">light</p></div><div class="del">X</div></div><div class="coffee"><div class=flex><div class="d-none">2</div><div class="name"><p>Half City</p></div><p class="roast">light</p></div><div class="del">X</div></div><div class="coffee"><div class=flex><div class="d-none">2</div><div class="name"><p>Half City</p></div><p class="roast">medium</p></div><div class="del">X</div></div>"`;
