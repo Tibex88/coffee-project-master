@@ -17,11 +17,13 @@
     "jsdom": "^22.0.0"
   },
   "dependencies": {
-    "@types/jest": "^29.5.1",
-    "jquery": "^3.7.0",
-    "puppeteer": "^20.3.0"
+    "@types/jest": "^29.5.1"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "testMatch":[
+      "**/tests/**/*.test.js"
+    ]
+    
   }
 }

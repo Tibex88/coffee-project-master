@@ -16,3 +16,14 @@ exports = {
     // "!**/*.spec.js", // Exclude files ending with '.spec.js'
   ],
 };
+
+// "testMatch": [
+//   "**/tests/**/index.test.js", 
+// ],
+// "testEnvironment": "jsdom",
+// "collectCoverageFrom": [
+//   "**/tests/**",
+//   "!/**/*.js",
+//   "!**/main.js", 
+//   "!**/node_modules/**", 
+// ]
