@@ -84,15 +84,17 @@ createCoffee = (e) => {
       errorDiv.innerHTML += `<p class='error'>${item}</p>`;
     });
   } else {
-    //CREATES NEW OBJECT TO BE PUSHED TO ARRAY OF COFFEE OBJECTS:
-    var newCoffee = {
-      id: coffees.length + 1,
-      name: newCoffeeName,
-      roast: newCoffeeRoast,
-    };
-    //PUSHES NEW COFFEE TO ARRAY:
-    coffees.push(newCoffee);
-    init();
+    if (coffees.filter(coffee => coffee.name === newCoffeeName).length === 0) {
+      //CREATES NEW OBJECT TO BE PUSHED TO ARRAY OF COFFEE OBJECTS:
+      var newCoffee = {
+        id: coffees.length + 1,
+        name: newCoffeeName,
+        roast: newCoffeeRoast,
+      };
+      //PUSHES NEW COFFEE TO ARRAY:
+      coffees.push(newCoffee);
+      init();
+    } 
   }
 };
 

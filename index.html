@@ -61,38 +61,17 @@
               class="coffee-selectors"
               required
               min="1"
-              max="29"
+              max="30"
+              pattern="[a-zA-Z0-9 ]{1,30}$"
                />
+            <div id="searchErrors"></div>
+
             <input
               id="submit"
               type="submit"
               value="Search"
               class="btn-dark btn coffee-selectors button" />
             <hr />
-            <!--                   OTHER SEARCH METHOD TO EXPLORE LATER-->
-            <!--                   <label for="exampleDataList" class="form-label">Coffee Name</label>-->
-            <!--                   <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">-->
-            <!--                   <datalist id="datalistOptions">-->
-            <!--                       <option value="Light City">-->
-            <!--                       <option value="Half City">-->
-            <!--                       <option value="Cinnamon">-->
-            <!--                       <option value="City">-->
-            <!--                       <option value="American">-->
-            <!--                       <option value="Breakfast">-->
-            <!--                       <option value="High">-->
-            <!--                       <option value="Continental">-->
-            <!--                       <option value="New Orleans">-->
-            <!--                       <option value="European">-->
-            <!--                       <option value="Espresso">-->
-            <!--                       <option value="Viennese">-->
-            <!--                       <option value="Italian">-->
-            <!--                       <option value="French">-->
-            <!--                   </datalist>-->
-            <!--        SUBMIT BUTTON-->
-            <!--                   <div class="">-->
-            <!--                       <input id="submit" type="submit" class="button1 row"/>-->
-            <!--                   </div>-->
-            <!--                   <hr>-->
           </form>
           <!--ADD COFFEE SECTION-->
           <h2 class="addCoffee text-center">

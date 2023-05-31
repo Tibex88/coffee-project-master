@@ -148,3 +148,85 @@ describe("Coffee form inputs", () => {
     expect(nameInput.checkValidity()).toBeTruthy();
   });
 });
+
+describe('Coffee search form', () => {
+  let form;
+
+  beforeEach(() => {
+ // Create a new form element before each test
+    form = document.createElement('form');
+    form.innerHTML = `
+      <label for="roast-selection" class="form-label"> Roast</label>
+      <select id="roast-selection" class="selectbutton coffee-selectors">
+        <option>light</option>
+        <option>medium</option>
+        <option>dark</option>
+        <option>all</option>
+      </select>
+      <label for="coffee-name" class="form-label">Search Coffee</label>
+      <input
+        type="text"
+        placeholder="Enter coffee name here"
+        id="coffee-name"
+        class="coffee-selectors"
+        required
+        minlength="1"
+        maxlength="30"
+        pattern="[a-zA-Z0-9 ]{1,30}$"
+      />
+      <div id="searchErrors"></div>
+      <input
+        id="submit"
+        type="submit"
+        value="Search"
+        class="btn-dark btn coffee-selectors button"
+      />
+      <hr />
+    `;
+  });
+
+  test('form should have a roast selection dropdown', () => {
+    const roastSelection = form.querySelector('#roast-selection');
+    expect(roastSelection).toBeTruthy();
+  });
+
+  test('form should have a coffee name search input', () => {
+    const coffeeNameInput = form.querySelector('#coffee-name');
+    expect(coffeeNameInput).toBeTruthy();
+  });
+
+  test('form should have a submit button', () => {
+    const submitButton = form.querySelector('#submit');
+    expect(submitButton).toBeTruthy();
+  });
+
+  test('coffee name input should have a placeholder text', () => {
+    const coffeeNameInput = form.querySelector('#coffee-name');
+    expect(coffeeNameInput.placeholder).toBe('Enter coffee name here');
+  });
+
+  test('submit button should have the text "Search"', () => {
+    const submitButton = form.querySelector('#submit');
+    expect(submitButton.value).toBe('Search');
+  });
+
+  test('coffee name input should have a required attribute', () => {
+    const coffeeNameInput = form.querySelector('#coffee-name');
+    expect(coffeeNameInput.required).toBeTruthy();
+  });
+
+  test('coffee name input should have a min length of 1', () => {
+    const coffeeNameInput = form.querySelector('#coffee-name');
+    expect(coffeeNameInput.minLength).toBe(1);
+  });
+
+  test('coffee name input should have a max length of 30', () => {
+    const coffeeNameInput = form.querySelector('#coffee-name');
+    expect(coffeeNameInput.maxLength).toBe(30);
+  });
+
+  test('coffee name input should only accept alphanumeric characters and spaces', () => {
+    const coffeeNameInput = form.querySelector('#coffee-name');
+    expect(coffeeNameInput.pattern).toBe('[a-zA-Z0-9 ]{1,30}$');
+  });
+});
