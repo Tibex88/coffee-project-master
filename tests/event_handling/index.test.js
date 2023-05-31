@@ -56,6 +56,7 @@ describe("Event Handling Test", () => {
     for (i = 0; i < coffees.length; i++) {
       if (coffees[i].name == coffeeName) 
         coffeeRemoved = false
+        break
     }
 
     expect(coffeeRemoved).toBe(true)
